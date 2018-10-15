@@ -1,0 +1,19 @@
+<h2>VOICEROID動画 再生数ランキング TOP100</h2>
+<h2></h2>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>順位</th><th>投稿日</th><th>タイトル</th><th>再生数</th><th>コメント数</th><th>マイリスト数</th>
+    </tr>
+    <% @videos.each.with_index(1) do |video, idx| %>
+    <tr>
+      <td><%=idx%></td>
+      <td><%=video.START_DATE%></td>
+      <td><%=video.TITLE%></td>
+      <td><%=video.VIEW_CNT.to_i%></td>
+      <td><%=video.COMMENT_CNT.to_i%></td>
+      <td><%=video.MYLIST_CNT.to_i%></td>
+    </tr>
+    <% end %>
+  </thead>
+</table>

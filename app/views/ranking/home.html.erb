@@ -1,0 +1,13 @@
+<h2>月別(投稿日)再生数ランキングをまとめました</h2>
+<div class="description">
+    ニコニコ動画に投稿された動画で、タグに「VOICEROID」を含む動画の投稿日を基準とした月間再生数ランキングを作りました<br>
+    過去にどんな動画が人気だったのか知ることができます
+</div>
+<% @year_monthes.each.with_index(1) do |ym, idx| %>
+<%= link_to ym.YEAR_MONTH,   "ranking/#{ym.YEAR_MONTH}" , class: 'btn' %>
+    <% if idx % 4 == 0 %>
+    <br>
+    <% end %>
+
+<% end %>
+
