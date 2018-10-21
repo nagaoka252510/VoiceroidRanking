@@ -9,7 +9,7 @@
     <tr>
       <td><%=idx%></td>
       <td><%=video.START_DATE%></td>
-      <td><%=video.TITLE%></td>
+      <td><%=link_to video.TITLE, "https://www.nicovideo.jp/watch/#{video.CONTENT_ID}", target: "_blank"%></td>
       <td><%=video.VIEW_CNT.to_i%></td>
       <td><%=video.COMMENT_CNT.to_i%></td>
       <td><%=video.MYLIST_CNT.to_i%></td>
