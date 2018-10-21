@@ -8,7 +8,7 @@
     <% @videos.each.with_index(1) do |video, idx| %>
     <tr>
       <td><%=idx%></td>
-      <td><%=video.START_DATE%></td>
+      <td><%=DateTime.parse(video.START_DATE).strftime("%Y-%m-%d %H:%M:%S")%></td>
       <td><%=link_to video.TITLE, "https://www.nicovideo.jp/watch/#{video.CONTENT_ID}", target: "_blank"%></td>
       <td><%=video.VIEW_CNT.to_i%></td>
       <td><%=video.COMMENT_CNT.to_i%></td>
