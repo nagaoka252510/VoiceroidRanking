@@ -1,8 +1,6 @@
 <h2>月別(投稿日)再生数ランキングをまとめました</h2>
 <div class="description">
-    ニコニコ動画に投稿された動画で、<br>
-    タグに「VOICEROID」を含む動画の投稿日を基準とした<br>
-    月間再生数ランキングを作りました<br>
+    ニコニコ動画に投稿された動画で、タグに「VOICEROID」を含む動画の投稿日を基準とした月間再生数ランキングを作りました<br>
     過去にどんな動画が人気だったのか知ることができます
 </div>
 <% @year_monthes.each.with_index(1) do |ym, idx| %>
@@ -10,10 +8,6 @@
     <% if idx % 4 == 0 %>
     <br>
     <% end %>
+
 <% end %>
-<div>
-<h3>当サイトについて</h3>
-このサイトはVOICEROIDが好きな個人が運営しているサイトです<br>
-未完成がデフォルトです<br>
-お問合せは<%= link_to "こちら", "https://twitter.com/ihirhs", target: "_blank"%>まで
-</div>
+
